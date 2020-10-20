@@ -26,7 +26,8 @@ public class Main {
             System.out.println("6) Remove from favorites");
             System.out.println("7) List of favorite musics");
             System.out.println("8) Stop playing");
-            System.out.println("9) Exit");
+            System.out.println("9) Search the music");
+            System.out.println("10) Exit");
             input = myObj.nextInt();
 
             switch (input){
@@ -230,9 +231,34 @@ public class Main {
                             country.stopPlaying();
                         break;
                     }
-                        case 9:
-                            run = false;
+                case 9:
+                    String singerName = new String();
+                    System.out.println("Which type you were listening?");
+                    System.out.println("1) Pop");
+                    System.out.println("2) Jazz");
+                    System.out.println("3) Rock");
+                    System.out.println("4) Country");
+                    in = myObj.nextInt();
+                    System.out.println("Enter the name of the singer");
+                    singerName = myObj.next();
+                    switch (in){
+                        case 1:
+                            pop.searchSinger(singerName);
                             break;
+                        case 2:
+                            jazz.searchSinger(singerName);
+                            break;
+                        case 3:
+                            rock.searchSinger(singerName);
+                            break;
+                        case 4:
+                            country.searchSinger(singerName);
+                            break;
+                    }
+                    break;
+                case 10:
+                    run = false;
+                    break;
             }
         }
     }
