@@ -153,6 +153,21 @@ public class MusicCollection
             i++;
         }
     }
-
-
+    
+    public void searchSinger(String sing){
+        int i=1;
+        Music test;
+        Iterator<Music> it = files.iterator();
+        while(it.hasNext()){
+            test = it.next();
+            if(test.getSinger().equals(sing)){
+                System.out.print("" + i +") ");
+                test.print();
+                i++;
+            }
+        }
+        if(i==1){
+            System.out.println("No music!");
+        }
+    }
 }
