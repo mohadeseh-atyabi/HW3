@@ -53,8 +53,8 @@ public class MusicCollection
      */
     public void listFile(int index)
     {
-        if(validIndex(index)) {
-            files.get(index).print();
+        if(validIndex(index-1)) {
+            files.get(index-1).print();
         }
     }
 
@@ -77,8 +77,8 @@ public class MusicCollection
      */
     public void removeFile(int index)
     {
-        if(validIndex(index)) {
-            files.remove(index);
+        if(validIndex(index-1)) {
+            files.remove(index-1);
         }
     }
 
@@ -89,8 +89,8 @@ public class MusicCollection
      */
     public void startPlaying(int index)
     {
-        if(validIndex(index)) {
-            player.startPlaying(files.get(index).getName());
+        if(validIndex(index-1)) {
+            player.startPlaying(files.get(index-1).getName());
         }
     }
 
@@ -127,8 +127,8 @@ public class MusicCollection
      * @param index Index of your favorite music.
      */
     public void addFavorite(int index){
-        if(validIndex(index)){
-            favorite.add(files.get(index));
+        if(validIndex(index-1)){
+            favorite.add(files.get(index-1));
         }
     }
 
@@ -137,8 +137,8 @@ public class MusicCollection
      * @param index Index of the music in favorite list.
      */
     public void removeFavorite(int index){
-        if(validIndex(index)){
-            favorite.remove(index);
+        if(validIndex(index-1)){
+            favorite.remove(index-1);
         }
     }
 
