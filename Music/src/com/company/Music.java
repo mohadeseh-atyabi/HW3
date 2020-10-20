@@ -28,4 +28,5 @@ public class Music {
     }
 
     public String getName(){ return name; }
+    public String getSinger(){ return singer; }
 }
